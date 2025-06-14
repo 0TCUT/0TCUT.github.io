@@ -1,0 +1,92 @@
+# 🔧 项目特定的忽略文件
+
+# MCP相关
+*.log
+.mcp-cache/
+mcp-debug.json
+
+# Python相关
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.env
+
+# Conda环境
+.conda/
+
+# Node.js相关
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn/
+.pnp.*
+
+# 备份和临时文件
+backup/*.tmp
+backup/temp_*
+backup/*.log
+backup/large_files/
+*.bak
+*.swp
+*.swo
+*~
+
+# 系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE相关
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# 开发工具
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 大文件和媒体（如果有的话）
+*.mp4
+*.avi
+*.mov
+*.zip
+*.tar.gz
+*.rar
+
+# 敏感信息
+config.local.json
+secrets.json
+.env.local
+.env.production
+
+# 构建输出
+dist/
+build/
+out/
+
+# 测试相关
+test-results/
+coverage/
+
+# 本地开发
+local_settings.py
+development.json 

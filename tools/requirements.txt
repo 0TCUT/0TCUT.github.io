@@ -1,0 +1,8 @@
+# MCP主程序依赖包
+mcp>=1.0.0
+asyncio-subprocess>=1.0.0
+pathlib2>=2.3.0
+
+# 可选依赖
+requests>=2.31.0
+aiohttp>=3.8.0 
