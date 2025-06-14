@@ -51,4 +51,14 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Custom mobile menu toggle
+    const customNavbarToggler = document.querySelector('.navbar-toggle');
+    const customNavbarMenu = document.querySelector('.navbar-menu');
+    if (customNavbarToggler && customNavbarMenu) {
+        customNavbarToggler.addEventListener('click', () => {
+            customNavbarMenu.classList.toggle('active');
+            customNavbarToggler.classList.toggle('active');
+        });
+    }
+
 });
