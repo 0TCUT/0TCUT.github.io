@@ -24,6 +24,41 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- Custom CSS for mobile menu -->
+        <style>
+            @media (max-width: 991.98px) {
+                .navbar-menu {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    background-color: #212529; /* Dark background to match theme */
+                    padding: 10px 0;
+                }
+                .navbar-menu.active {
+                    display: block;
+                }
+                .nav-links {
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                }
+                .nav-links li {
+                    margin: 10px 0;
+                    width: 100%;
+                    text-align: center;
+                }
+                .navbar-toggle {
+                    display: block; /* Ensure toggle is always visible on mobile */
+                }
+            }
+            @media (min-width: 992px) {
+                .navbar-toggle {
+                    display: none; /* Hide toggle on desktop */
+                }
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Top Navigation Bar -->
