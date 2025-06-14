@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Talks - Tian</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Top Navigation Bar -->
+        <nav class="top-navbar">
+            <div class="container-fluid">
+                <div class="navbar-content">
+                    <div class="navbar-brand">
+                        <a href="index.html">Tian / Sports Biomechanics</a>
+                    </div>
+                    <div class="navbar-menu">
+                        <ul class="nav-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="publications.html">Publications</a></li>
+                            <li><a href="talks.html" class="active">Talks</a></li>
+                            <li><a href="teaching.html">Teaching</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="blog.html">Blog Posts</a></li>
+                            <li><a href="cv.html">CV</a></li>
+                            <li class="theme-toggle">
+                                <button id="theme-toggle-btn" class="theme-btn" onclick="toggleTheme()">
+                                    <i class="fas fa-moon" id="theme-icon"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Talks Section -->
+        <section class="content-section bg-light active">
+            <div class="container">
+                <div class="content-wrapper">
+                    <h1 class="page-title">Talks & Presentations</h1>
+                    <p class="lead">Recent and upcoming conference presentations and invited talks.</p>
+                    
+                    <div class="talks-list">
+                        <div class="talk-item">
+                            <h3>Biomechanical Analysis in Sports Performance</h3>
+                            <p class="venue">International Sports Science Conference, Tokyo, Japan</p>
+                            <p class="date">June 15, 2024</p>
+                            <p class="description">An overview of modern biomechanical analysis techniques and their applications in sports performance optimization.</p>
+                            <div class="talk-links">
+                                <a href="#" class="btn btn-sm btn-outline-primary">Slides</a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary">Video</a>
+                            </div>
+                        </div>
+                        
+                        <div class="talk-item">
+                            <h3>Injury Prevention Through Movement Analysis</h3>
+                            <p class="venue">Asian Conference on Biomechanics, Seoul, Korea</p>
+                            <p class="date">March 22, 2024</p>
+                            <p class="description">Exploring how biomechanical analysis can be used to identify and prevent sports injuries.</p>
+                            <div class="talk-links">
+                                <a href="#" class="btn btn-sm btn-outline-primary">Slides</a>
+                                <a href="#" class="btn btn-sm btn-outline-info">Abstract</a>
+                            </div>
+                        </div>
+                        
+                        <div class="talk-item">
+                            <h3>Advanced Motion Capture Techniques</h3>
+                            <p class="venue">European Biomechanics Society Meeting, Barcelona, Spain</p>
+                            <p class="date">July 8, 2023</p>
+                            <p class="description">Workshop on cutting-edge motion capture technologies and their applications in biomechanical research.</p>
+                            <div class="talk-links">
+                                <a href="#" class="btn btn-sm btn-outline-primary">Slides</a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary">Materials</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        
+        <!-- Theme Toggle JavaScript -->
+        <script>
+            // Check for saved theme preference or default to 'light'
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            
+            // Update icon based on current theme
+            function updateThemeIcon() {
+                const themeIcon = document.getElementById('theme-icon');
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                
+                if (currentTheme === 'dark') {
+                    themeIcon.className = 'fas fa-sun';
+                } else {
+                    themeIcon.className = 'fas fa-moon';
+                }
+            }
+            
+            // Toggle theme function
+            function toggleTheme() {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateThemeIcon();
+            }
+            
+            // Initialize theme icon on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                updateThemeIcon();
+            });
+        </script>
+    </body>
+</html> 

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Portfolio - Tian</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Top Navigation Bar -->
+        <nav class="top-navbar">
+            <div class="container-fluid">
+                <div class="navbar-content">
+                    <div class="navbar-brand">
+                        <a href="index.html">Tian / Sports Biomechanics</a>
+                    </div>
+                    <div class="navbar-menu">
+                        <ul class="nav-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="publications.html">Publications</a></li>
+                            <li><a href="talks.html">Talks</a></li>
+                            <li><a href="teaching.html">Teaching</a></li>
+                            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                            <li><a href="blog.html">Blog Posts</a></li>
+                            <li><a href="cv.html">CV</a></li>
+                            <li class="theme-toggle">
+                                <button id="theme-toggle-btn" class="theme-btn" onclick="toggleTheme()">
+                                    <i class="fas fa-moon" id="theme-icon"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Portfolio Section -->
+        <section class="content-section bg-light active">
+            <div class="container">
+                <div class="content-wrapper">
+                    <h1 class="page-title">Portfolio</h1>
+                    <p class="lead">Research projects, software tools, and data visualizations.</p>
+                    
+                    <div class="portfolio-grid">
+                        <div class="portfolio-item-new">
+                            <div class="portfolio-image">
+                                <img src="assets/img/portfolio/1.jpg" alt="ACL Analysis Tool" class="img-fluid">
+                            </div>
+                            <div class="portfolio-content">
+                                <h4>ACL Injury Risk Assessment Tool</h4>
+                                <p>MATLAB-based tool for analyzing movement patterns and predicting ACL injury risk in athletes.</p>
+                                <a href="#" class="btn btn-sm btn-primary">View Project</a>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item-new">
+                            <div class="portfolio-image">
+                                <img src="assets/img/portfolio/2.jpg" alt="Motion Capture Visualization" class="img-fluid">
+                            </div>
+                            <div class="portfolio-content">
+                                <h4>3D Motion Visualization</h4>
+                                <p>Interactive web-based tool for visualizing and analyzing 3D motion capture data.</p>
+                                <a href="#" class="btn btn-sm btn-primary">View Project</a>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item-new">
+                            <div class="portfolio-image">
+                                <img src="assets/img/portfolio/3.jpg" alt="Performance Analysis Dashboard" class="img-fluid">
+                            </div>
+                            <div class="portfolio-content">
+                                <h4>Performance Analysis Dashboard</h4>
+                                <p>Real-time dashboard for monitoring and analyzing athletic performance metrics.</p>
+                                <a href="#" class="btn btn-sm btn-primary">View Project</a>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item-new">
+                            <div class="portfolio-image">
+                                <img src="assets/img/portfolio/4.jpg" alt="Biomechanical Modeling Suite" class="img-fluid">
+                            </div>
+                            <div class="portfolio-content">
+                                <h4>Biomechanical Modeling Suite</h4>
+                                <p>Comprehensive software package for creating and analyzing biomechanical models.</p>
+                                <a href="#" class="btn btn-sm btn-primary">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        
+        <!-- Theme Toggle JavaScript -->
+        <script>
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            
+            function updateThemeIcon() {
+                const themeIcon = document.getElementById('theme-icon');
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                
+                if (currentTheme === 'dark') {
+                    themeIcon.className = 'fas fa-sun';
+                } else {
+                    themeIcon.className = 'fas fa-moon';
+                }
+            }
+            
+            function toggleTheme() {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateThemeIcon();
+            }
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                updateThemeIcon();
+            });
+        </script>
+    </body>
+</html> 
